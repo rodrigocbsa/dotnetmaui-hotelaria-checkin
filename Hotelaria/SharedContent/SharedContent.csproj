@@ -1,7 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net7.0;net7.0-android;net7.0-ios</TargetFrameworks>
+		<TargetFrameworks>net7.0;net7.0-ios;net7.0-android33.0</TargetFrameworks>
 		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
 		<!-- <TargetFrameworks>$(TargetFrameworks);net7.0-tizen</TargetFrameworks> -->
 		<UseMaui>true</UseMaui>
@@ -54,6 +54,12 @@
 	    <Color>#512BD4</Color>
 	    <BaseSize>128,128</BaseSize>
 	  </MauiSplashScreen>
+	</ItemGroup>
+
+	<ItemGroup>
+		<MauiImage Include="Resources\Images\*" />
+		<MauiImage Include="Resources\Images\hotel\*" />
+		<MauiImage Include="Resources\Images\hospede\*" />
 	</ItemGroup>
 
 	<ItemGroup>
