@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Hotel.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Hotel"
+    Shell.FlyoutBehavior="Flyout"
+    Shell.BackgroundColor="Transparent"
+    FlyoutIcon="menu.png">
+
+    <ShellContent
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+    <MenuItem x:Name="Export"
+              Text="Exportar FNRHs"
+              IconImageSource="export.png"/>
+
+    <MenuItem x:Name="About"
+              Text="Suporte"
+              IconImageSource="info.png"/>
+
+
+    <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <Grid BackgroundColor="Black"
+                  HeightRequest="200">
+                <Image Aspect="AspectFill"
+                       Source="logo.png"
+                       Opacity="0.6" />
+                <Label Text="© AIS Brasil 2023"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center" />
+            </Grid>
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
+
+</Shell>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:resources="clr-namespace:SharedContent.Resources.Styles;assembly=SharedContent"
+             x:Class="Hotel.Pages.AboutPage"
+             Title="AboutPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <resources:SharedResourceDictionary/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <VerticalStackLayout Margin="20">
+
+        <Button x:Name="Close_btn"
+                
+                Style="{StaticResource CloseButton}" />
+
+        <Label>
+            <Label.Text>
+                Reporte-nos o seu problema enviando um email para rcbsa@protonmail.com
+
+                Atenciosamente,
+                Equipe AIS Brasil
+            </Label.Text>
+        </Label>
+
+    </VerticalStackLayout>
+</ContentPage>
