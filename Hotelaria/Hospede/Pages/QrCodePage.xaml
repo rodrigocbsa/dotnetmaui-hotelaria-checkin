@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:resources="clr-namespace:SharedContent.Resources.Styles;assembly=SharedContent"
+             x:Class="Hospede.Pages.QrCodePage">
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <resources:SharedResourceDictionary/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <VerticalStackLayout VerticalOptions="Center">
+
+        <Button x:Name="Close_btn"
+                Style="{StaticResource CloseButton}"
+        />
+
+        <Image x:Name="QrCodeImage" Aspect="AspectFit"/>
+        <Label HorizontalOptions="Center"
+            Text="Esta é a sua ficha de hóspede."/>
+        <Label HorizontalOptions="Center"
+            Text="Apresente o QrCode na recepção."/>
+
+    </VerticalStackLayout>
+</ContentPage>

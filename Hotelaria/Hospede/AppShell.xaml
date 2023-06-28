@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Hospede.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Hospede"
+    xmlns:pages="clr-namespace:Hospede.Pages"
+    Shell.FlyoutBehavior="Flyout"
+    Shell.BackgroundColor="Transparent"
+    FlyoutIcon="menu.png">
+
+
+    <Tab Title="CheckIn"
+         Icon="checkin.png">
+        <ShellContent ContentTemplate="{DataTemplate local:MainPage}"/>
+    </Tab>
+
+    <Tab Title="Minha ficha"
+         Icon="ficha.png">
+        <ShellContent ContentTemplate="{DataTemplate pages:FichaPage}"/>
+    </Tab>
+
+    <MenuItem x:Name="About"
+              Text="Sobre o aplicativo"
+              IconImageSource="info.png"/>
+
+    <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <Grid BackgroundColor="Black"
+                  HeightRequest="200">
+                <Image Aspect="AspectFill"
+                       Source="logo.png"
+                       Opacity="0.6" />
+                <Label Text="© AIS Brasil 2023"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center" />
+            </Grid>
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
+
+
+</Shell>

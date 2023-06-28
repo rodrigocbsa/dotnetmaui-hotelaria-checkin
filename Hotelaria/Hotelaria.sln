@@ -8,7 +8,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hotel", "Hotel\Hotel.csproj
 		{1801CA9A-6A06-459D-877C-FFC6B8A2DC39} = {1801CA9A-6A06-459D-877C-FFC6B8A2DC39}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedContent", "SharedContent\SharedContent.csproj", "{1801CA9A-6A06-459D-877C-FFC6B8A2DC39}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedContent", "SharedContent\SharedContent.csproj", "{1801CA9A-6A06-459D-877C-FFC6B8A2DC39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hospede", "Hospede\Hospede.csproj", "{D544F752-CB57-4427-91B8-1002F0674157}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1801CA9A-6A06-459D-877C-FFC6B8A2DC39} = {1801CA9A-6A06-459D-877C-FFC6B8A2DC39}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +31,12 @@ Global
 		{1801CA9A-6A06-459D-877C-FFC6B8A2DC39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1801CA9A-6A06-459D-877C-FFC6B8A2DC39}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1801CA9A-6A06-459D-877C-FFC6B8A2DC39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D544F752-CB57-4427-91B8-1002F0674157}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D544F752-CB57-4427-91B8-1002F0674157}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D544F752-CB57-4427-91B8-1002F0674157}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{D544F752-CB57-4427-91B8-1002F0674157}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D544F752-CB57-4427-91B8-1002F0674157}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D544F752-CB57-4427-91B8-1002F0674157}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

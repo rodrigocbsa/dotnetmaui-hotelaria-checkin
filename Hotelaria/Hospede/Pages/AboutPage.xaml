@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:resources="clr-namespace:SharedContent.Resources.Styles;assembly=SharedContent"
+             x:Class="Hospede.Pages.AboutPage"
+             Title="AboutPage"
+             Shell.FlyoutBehavior="Disabled">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <resources:SharedResourceDictionary/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <VerticalStackLayout Margin="20">
+
+        <Button x:Name="Close_btn"
+                
+                Style="{StaticResource CloseButton}" />
+
+        <Label>
+            <Label.Text>
+                Olá!
+                Seja muito bem vindo ao aplicativo que facilitará a sua vida de hóspede. Veja como é simples:
+                
+                (1) Vá em "Minha ficha" e informe os seus dados, que são necessários para o registro nacional da ficha de hóspede (FNRH).
+                (2) Ao chegar no saguão de algum de nossos hotéis parceiros, apresente-se e mostre o seu QrCode de CheckIn.
+                
+                Caso tenha alguma sugestão, dúvida ou problema, contate-nos em rcbsa@protonmail.com
+                Aproveite!
+                
+                Atenciosamente,
+                Equipe AIS Brasil
+            </Label.Text>
+        </Label>
+
+    </VerticalStackLayout>
+</ContentPage>

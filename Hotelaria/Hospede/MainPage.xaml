@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:myresources="clr-namespace:SharedContent.Resources.Styles;assembly=SharedContent"
+             x:Class="Hospede.MainPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <myresources:SharedResourceDictionary/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <VerticalStackLayout VerticalOptions="Center">
+
+        <Button x:Name="CheckIn_btn"
+                ImageSource="qr.png"
+                
+                Style="{StaticResource PrimaryButton}">
+            <Button.Shadow>
+                <Shadow Brush="Black"
+                        Offset="5,5"
+                        Radius="10"
+                        Opacity="0.5" />
+            </Button.Shadow>
+        </Button>
+
+    </VerticalStackLayout>
+
+</ContentPage>
