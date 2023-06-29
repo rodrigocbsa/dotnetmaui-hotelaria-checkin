@@ -1,6 +1,10 @@
-﻿using Hospede.Methods;
+﻿using CommunityToolkit.Maui.Alerts;
+using CommunityToolkit.Maui.Core;
+using Hospede.Methods;
 using Hospede.Pages;
+using System;
 using System.Diagnostics;
+using System.Threading.Tasks;
 
 namespace Hospede;
 
@@ -33,23 +37,13 @@ public partial class MainPage : ContentPage
 
     private async void OnCheckInClicked(object sender, EventArgs e)
     {
-        bool answer = Preferences.Default.Get("AvisoQrCode", true);
-
         if (Preferences.Default.Get("CamposVazios", true) == false)
         {
             await Navigation.PushModalAsync(new QrCodePage());
         }
         else
         {
-            if (answer)
-            {
-                answer = await DisplayAlert("Aviso", "O QrCode só poderá ser gerado com todos os campos da ficha preenchidos.", "Entendi", "Não mostrar novamente");
-            }
-
-            if (answer == false)
-            {
-                Preferences.Default.Set("AvisoQrCode", false);
-            }
+            await ToastMethods.ShowToastAsync("O QrCode só poderá ser gerado com todos os campos da ficha preenchidos.", ToastDuration.Long);
         }
 
     }

@@ -1,4 +1,6 @@
-using BarcodeScanner.Mobile.Maui;
+using BarcodeScanner.Mobile;
+using CommunityToolkit.Maui.Core;
+using Hospede.Methods;
 using Hotel.Paths;
 
 
@@ -40,18 +42,18 @@ public partial class ScanPage : ContentPage
     private async void SaveDetectedFNRHToCSV(OnDetectedEventArg e)
     {
         Camera.IsScanning = false;
-        UserFeedbacks.Text = "QrCode capturado.";
+        await ToastMethods.ShowToastAsync("QrCode capturado.", ToastDuration.Short);
         string result = ReadQrCodeContent(e);
         SaveFNRHAsStringToCSV(result);
 
         await DisplayAlert("Dados salvos", result, "Ok");
         Camera.IsScanning = true;
-        UserFeedbacks.Text = "Aguardando QrCode...";
+        await ToastMethods.ShowToastAsync("Aguardando QrCode...", ToastDuration.Short);
     }
 
     private string ReadQrCodeContent(OnDetectedEventArg e)
     {
-        List<BarcodeScanner.Mobile.Core.BarcodeResult> obj = e.BarcodeResults;
+        List<BarcodeResult> obj = e.BarcodeResults;
 
         string result = string.Empty;
         for (var i = 0; i < obj.Count; i++)

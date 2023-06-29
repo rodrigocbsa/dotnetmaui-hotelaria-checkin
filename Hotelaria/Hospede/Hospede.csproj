@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net6.0-android33.0;net6.0-ios</TargetFrameworks>
+		<TargetFrameworks>net7.0-ios;net7.0-android33.0</TargetFrameworks>
 		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
 		<!-- <TargetFrameworks>$(TargetFrameworks);net7.0-tizen</TargetFrameworks> -->
 		<OutputType>Exe</OutputType>
@@ -76,6 +76,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <PackageReference Include="CommunityToolkit.Maui" Version="5.2.0" />
 	  <PackageReference Include="CsvHelper" Version="30.0.1" />
 	  <PackageReference Include="Net.Codecrete.QrCodeGenerator" Version="2.0.3" />
 	  <PackageReference Include="SkiaSharp.Views.Maui.Core" Version="2.88.3" />

@@ -1,6 +1,7 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using BarcodeScanner.Mobile;
+using CommunityToolkit.Maui;
+using Microsoft.Extensions.Logging;
 using Microsoft.Maui.Hosting;
-using BarcodeScanner.Mobile;
 
 namespace Hotel;
 
@@ -11,6 +12,7 @@ public static class MauiProgram
 		var builder = MauiApp.CreateBuilder();
 		builder
 			.UseMauiApp<App>()
+			.UseMauiCommunityToolkit()
 			.ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");

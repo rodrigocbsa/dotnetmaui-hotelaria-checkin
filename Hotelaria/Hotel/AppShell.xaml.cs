@@ -1,4 +1,6 @@
-﻿using Hotel.Pages;
+﻿using CommunityToolkit.Maui.Core;
+using Hospede.Methods;
+using Hotel.Pages;
 using Hotel.Paths;
 
 
@@ -23,7 +25,7 @@ public partial class AppShell : Shell
             });
             return;
         }
-        await DisplayAlert("Aviso", "Não há fichas disponíveis para exportação.", "Ok");
+        await ToastMethods.ShowToastAsync("Não há fichas disponíveis para exportação", ToastDuration.Short);
     }
 
     private void OnAboutClicked(object sender, EventArgs e)

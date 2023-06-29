@@ -9,6 +9,7 @@ public partial class AppShell : Shell
     {
         InitializeComponent();
         About.Clicked += OnAboutClicked;
+        Routing.RegisterRoute(nameof(MainPage),typeof(MainPage));
     }
 
     private async void OnAboutClicked(object sender, EventArgs e)

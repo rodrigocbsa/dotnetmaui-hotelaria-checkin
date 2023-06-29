@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net6.0-ios;net6.0-android33.0</TargetFrameworks>
+		<TargetFrameworks>net7.0-ios;net7.0-android33.0</TargetFrameworks>
 		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
 		<!-- <TargetFrameworks>$(TargetFrameworks);net7.0-tizen</TargetFrameworks> -->
 		<OutputType>Exe</OutputType>
@@ -62,10 +62,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="BarcodeScanner.Mobile.Maui" Version="6.3.0-pre" />
-	</ItemGroup>
-
-	<ItemGroup>
+		<PackageReference Include="BarcodeScanner.Mobile.Maui" Version="7.0.0.1-pre" />
+		<PackageReference Include="CommunityToolkit.Maui" Version="5.2.0" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 	</ItemGroup>
 

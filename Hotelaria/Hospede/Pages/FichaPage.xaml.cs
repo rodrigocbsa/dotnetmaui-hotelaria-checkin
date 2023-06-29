@@ -1,3 +1,5 @@
+using CommunityToolkit.Maui.Alerts;
+using CommunityToolkit.Maui.Core;
 using Hospede.Methods;
 using Hospede.Models;
 using Hospede.Paths;
@@ -10,7 +12,6 @@ public partial class FichaPage : ContentPage
     {
         InitializeComponent();
     }
-
 
     protected override void OnDisappearing()
     {
@@ -25,21 +26,15 @@ public partial class FichaPage : ContentPage
 
     private async void SaveXAMLDataToCSV()
     {
-        bool answer = Preferences.Default.Get("AvisoSalvamento", true);
-
         Ficha ficha = DeXAMLParaFicha();
         if (ficha != null)
+        {
             CSVMethods.DeFichaParaCSV(ficha);
+            await ToastMethods.ShowToastAsync("Dados salvos localmente.", ToastDuration.Short);
+        }            
         else
         {
-            if (answer)
-            {
-                answer = await DisplayAlert("Aviso de salvamento automático", "Houveram campos vazios na ficha e portanto seus dados não puderam ser salvos. Volte e preencha todos os campos para habilitar a funcionalidade.", "Entendi", "Não mostrar novamente");
-            }
-            if (answer == false)
-            {
-                Preferences.Default.Set("AvisoSalvamento", false);
-            }
+            await ToastMethods.ShowToastAsync("Salvamento automático: houveram campos vazios na ficha e portanto seus dados não puderam ser salvos.", ToastDuration.Long);
         }
 
     }

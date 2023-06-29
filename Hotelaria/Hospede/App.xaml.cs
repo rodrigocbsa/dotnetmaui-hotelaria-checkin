@@ -6,16 +6,9 @@ namespace Hospede
     {
         public App()
         {
-            try
-            {
-                InitializeComponent();
+            InitializeComponent();
 
-                MainPage = new AppShell();
-            }catch (Exception ex)
-            {
-                Debug.WriteLine(ex);
-            }
-            
+            MainPage = new AppShell();
         }
     }
 }
