@@ -1,12 +1,12 @@
 ﻿using CsvHelper;
 using Hospede.Models;
+using Hospede.Paths;
 using Net.Codecrete.QrCodeGenerator;
-using SharedContent.Paths;
 using System.Globalization;
 
 namespace Hospede.Methods;
 
-internal static class CsvMethods
+internal static class CSVMethods
 {
     internal static void DeFichaParaCSV(Ficha ficha)
     {
@@ -38,6 +38,6 @@ internal static class CsvMethods
     public static void GenerateQrCodeFromCSVData()
     {
         var qr = QrCode.EncodeText(DeCSVParaString(), QrCode.Ecc.Low);
-        File.WriteAllText(FileSystem.AppDataDirectory + "ficha.svg", qr.ToSvgString(4));
+        qr.SaveAsPng(SharedApplicationPaths.QrPath, 10, 4);
     }
 }

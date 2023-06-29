@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace Hospede
+namespace Hospede.Platforms.iOS
 {
     [Register("AppDelegate")]
     public class AppDelegate : MauiUIApplicationDelegate

@@ -401,5 +401,47 @@
         <Setter Property="UnselectedTabColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray950}}" />
         <Setter Property="SelectedTabColor" Value="{AppThemeBinding Light={StaticResource Gray950}, Dark={StaticResource Gray200}}" />
     </Style>
+    
+    
+    <!-- SHARED RESOURCE DICTIONARY -->
+    <!-- BOTÕES -->
+    <Style x:Key="PrimaryButton" TargetType="Button">
+
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="Margin" Value="0"/>
+
+        <Setter Property="WidthRequest" Value="250"/>
+        <Setter Property="HeightRequest" Value="250"/>
+
+        <Setter Property="CornerRadius" Value="40" />
+        <Setter Property="BackgroundColor" Value="{StaticResource White}"/>
+
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="FontSize" Value="Title"/>
+        <Setter Property="TextColor" Value="{StaticResource Black}"/>
+
+    </Style>
+    <Style x:Key="CloseButton" TargetType="Button">
+
+        <Setter Property="Text" Value="Voltar"/>
+        <Setter Property="FontFamily" Value="OpensSansRegular" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextTransform" Value="Uppercase" />
+
+        <Setter Property="CornerRadius" Value="0" />
+
+        <Setter Property="HorizontalOptions" Value="End" />
+        <Setter Property="VerticalOptions" Value="Start"/>
+
+    </Style>
+    <!--$end-->
+
+    <!-- TEXTOS -->
+    <Style x:Key="TermoDeAceite" TargetType="Editor">
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="FontAttributes" Value="Italic"/>
+        <Setter Property="IsReadOnly" Value="True" />
+    </Style>
+    <!--$end-->
 
 </ResourceDictionary>

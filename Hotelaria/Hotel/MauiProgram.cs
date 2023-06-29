@@ -1,5 +1,6 @@
-﻿using BarcodeScanner.Mobile;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.Logging;
+using Microsoft.Maui.Hosting;
+using BarcodeScanner.Mobile;
 
 namespace Hotel;
 
@@ -16,8 +17,8 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			}).ConfigureMauiHandlers(handlers =>
 			{
-				handlers.AddBarcodeScannerHandler();
-			});
+                handlers.AddBarcodeScannerHandler();
+            });
 
 #if DEBUG
 		builder.Logging.AddDebug();

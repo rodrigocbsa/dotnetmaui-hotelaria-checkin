@@ -1,5 +1,6 @@
 ﻿using Hotel.Pages;
-using SharedContent.Paths;
+using Hotel.Paths;
+
 
 namespace Hotel;
 

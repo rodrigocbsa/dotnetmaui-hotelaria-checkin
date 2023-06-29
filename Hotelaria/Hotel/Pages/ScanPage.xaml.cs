@@ -1,5 +1,6 @@
-using BarcodeScanner.Mobile;
-using SharedContent.Paths;
+using BarcodeScanner.Mobile.Maui;
+using Hotel.Paths;
+
 
 namespace Hotel.Pages;
 
@@ -50,7 +51,7 @@ public partial class ScanPage : ContentPage
 
     private string ReadQrCodeContent(OnDetectedEventArg e)
     {
-        List<BarcodeResult> obj = e.BarcodeResults;
+        List<BarcodeScanner.Mobile.Core.BarcodeResult> obj = e.BarcodeResults;
 
         string result = string.Empty;
         for (var i = 0; i < obj.Count; i++)

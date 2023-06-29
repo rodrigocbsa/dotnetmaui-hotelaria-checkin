@@ -1,6 +1,6 @@
 using Hospede.Methods;
 using Hospede.Models;
-using SharedContent.Paths;
+using Hospede.Paths;
 
 namespace Hospede.Pages;
 
@@ -29,7 +29,7 @@ public partial class FichaPage : ContentPage
 
         Ficha ficha = DeXAMLParaFicha();
         if (ficha != null)
-            CsvMethods.DeFichaParaCSV(ficha);
+            CSVMethods.DeFichaParaCSV(ficha);
         else
         {
             if (answer)
@@ -45,7 +45,7 @@ public partial class FichaPage : ContentPage
     }
     private void LoadCSVDataToXAML()
     {
-        Ficha ficha = CsvMethods.DeCSVParaFicha();
+        Ficha ficha = CSVMethods.DeCSVParaFicha();
         if (ficha != null)
             DeFichaParaXAML(ficha);
     }

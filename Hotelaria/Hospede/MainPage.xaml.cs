@@ -1,5 +1,6 @@
 ﻿using Hospede.Methods;
 using Hospede.Pages;
+using System.Diagnostics;
 
 namespace Hospede;
 

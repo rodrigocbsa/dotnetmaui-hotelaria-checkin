@@ -1,5 +1,5 @@
 using Hospede.Methods;
-using SharedContent.Paths;
+using Hospede.Paths;
 
 namespace Hospede.Pages;
 
@@ -18,7 +18,7 @@ public partial class QrCodePage : ContentPage
 
     protected override void OnAppearing()
     {
-        CsvMethods.GenerateQrCodeFromCSVData();
+        CSVMethods.GenerateQrCodeFromCSVData();
         QrCodeImage.Source = SharedApplicationPaths.QrPath;
     }
 }

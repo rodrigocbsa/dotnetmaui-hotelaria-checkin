@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace Hospede
+namespace Hospede.Platforms.iOS
 {
     public class Program
     {

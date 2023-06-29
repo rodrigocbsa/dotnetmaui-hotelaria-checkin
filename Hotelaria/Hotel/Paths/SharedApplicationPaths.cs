@@ -1,4 +1,4 @@
-﻿namespace SharedContent.Paths;
+﻿namespace Hotel.Paths;
 
 public static class SharedApplicationPaths
 {

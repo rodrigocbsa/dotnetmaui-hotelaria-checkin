@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:resources="clr-namespace:SharedContent.Resources.Styles;assembly=SharedContent"
-             x:Class="Hotel.Pages.AboutPage"
-             Title="AboutPage">
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <resources:SharedResourceDictionary/>
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
-    </ContentPage.Resources>
+             x:Class="Hotel.Pages.AboutPage">
 
     <VerticalStackLayout Margin="20">
 
