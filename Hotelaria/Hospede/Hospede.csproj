@@ -45,35 +45,9 @@
 	  <ApplicationId>com.aisbrasil.hospede</ApplicationId>
 	</PropertyGroup>
 
-	<ItemGroup>
-	  <MauiAsset Include="Resources\Raw\AboutAssets.txt">
-	    <LogicalName>%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
-	  </MauiAsset>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <MauiFont Include="Resources\Fonts\OpenSans-Regular.ttf" />
-	  <MauiFont Include="Resources\Fonts\OpenSans-Semibold.ttf" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <MauiIcon Include="Resources\AppIcon\appicon.svg">
-	    <Color>#512BD4</Color>
-	    <ForegroundFile>Resources\AppIcon\appiconfg.svg</ForegroundFile>
-	  </MauiIcon>
-	</ItemGroup>
-
-	<ItemGroup>
-		<MauiImage Include="Resources\Images\*" />
-		<MauiImage Include="Resources\Images\hospede\*" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <MauiSplashScreen Include="Resources\Splash\splash.svg">
-	    <Color>#512BD4</Color>
-	    <BaseSize>128,128</BaseSize>
-	  </MauiSplashScreen>
-	</ItemGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-android33.0|AnyCPU'">
+	  <AndroidPackageFormat>apk</AndroidPackageFormat>
+	</PropertyGroup>
 
 	<ItemGroup>
 	  <PackageReference Include="CommunityToolkit.Maui" Version="5.2.0" />
@@ -99,9 +73,22 @@
 	  <MauiXaml Update="Resources\Styles\Colors.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Resources\Styles\SharedResourceDictionary.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Resources\Styles\Styles.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="../SharedContent/SharedContent.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Resources\Styles\SharedResourceDictionary.xaml.cs">
+	    <DependentUpon>%(Filename)</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 	<ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadDebuggerTimeoutExceptionHospedeHideInfoBar="True" /></VisualStudio></ProjectExtensions>

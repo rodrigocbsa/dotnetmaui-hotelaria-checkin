@@ -1,8 +1,7 @@
 using BarcodeScanner.Mobile;
 using CommunityToolkit.Maui.Core;
-using Hospede.Methods;
-using Hotel.Paths;
-
+using SharedContent.Methods;
+using SharedContent.Paths;
 
 namespace Hotel.Pages;
 

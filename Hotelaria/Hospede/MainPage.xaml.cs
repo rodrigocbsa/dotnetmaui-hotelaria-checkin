@@ -1,10 +1,7 @@
-﻿using CommunityToolkit.Maui.Alerts;
-using CommunityToolkit.Maui.Core;
+﻿using CommunityToolkit.Maui.Core;
 using Hospede.Methods;
 using Hospede.Pages;
-using System;
-using System.Diagnostics;
-using System.Threading.Tasks;
+using SharedContent.Methods;
 
 namespace Hospede;
 

@@ -4,13 +4,13 @@
              x:Class="Hospede.Pages.AboutPage"
              Shell.FlyoutBehavior="Disabled">
 
-    <VerticalStackLayout Margin="20">
+    <VerticalStackLayout>
 
         <Button x:Name="Close_btn"
                 
                 Style="{StaticResource CloseButton}" />
 
-        <Label>
+        <Label Margin="20">
             <Label.Text>
                 Olá!
                 Seja muito bem vindo ao aplicativo que facilitará a sua vida de hóspede. Veja como é simples:

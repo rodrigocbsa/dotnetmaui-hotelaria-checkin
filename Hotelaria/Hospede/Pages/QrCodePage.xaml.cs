@@ -1,5 +1,5 @@
 using Hospede.Methods;
-using Hospede.Paths;
+using SharedContent.Paths;
 
 namespace Hospede.Pages;
 

@@ -1,8 +1,8 @@
-using CommunityToolkit.Maui.Alerts;
 using CommunityToolkit.Maui.Core;
 using Hospede.Methods;
 using Hospede.Models;
-using Hospede.Paths;
+using SharedContent.Methods;
+using SharedContent.Paths;
 
 namespace Hospede.Pages;
 

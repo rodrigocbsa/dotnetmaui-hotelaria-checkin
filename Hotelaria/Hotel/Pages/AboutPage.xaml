@@ -3,13 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Hotel.Pages.AboutPage">
 
-    <VerticalStackLayout Margin="20">
+    <VerticalStackLayout>
 
         <Button x:Name="Close_btn"
                 
                 Style="{StaticResource CloseButton}" />
 
-        <Label>
+        <Label Margin="20">
             <Label.Text>
                 Reporte-nos o seu problema enviando um email para rcbsa@protonmail.com
 

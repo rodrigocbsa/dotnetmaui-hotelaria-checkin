@@ -1,7 +1,8 @@
 ﻿using CsvHelper;
 using Hospede.Models;
-using Hospede.Paths;
 using Net.Codecrete.QrCodeGenerator;
+using SharedContent.Paths;
+using System.Diagnostics;
 using System.Globalization;
 
 namespace Hospede.Methods;
@@ -25,9 +26,7 @@ internal static class CSVMethods
         using var reader = new StreamReader(SharedApplicationPaths.CsvPath);
         using var csv = new CsvReader(reader, CultureInfo.InvariantCulture);
         var records = csv.GetRecords<Ficha>();
-
-        records = new List<Ficha>();
-        return records.FirstOrDefault();
+        return records.First();
     }
 
     internal static string DeCSVParaString()

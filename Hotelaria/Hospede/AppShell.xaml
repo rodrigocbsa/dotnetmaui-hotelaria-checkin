@@ -6,7 +6,7 @@
     xmlns:local="clr-namespace:Hospede"
     xmlns:pages="clr-namespace:Hospede.Pages"
     Shell.FlyoutBehavior="Flyout"
-    Shell.BackgroundColor="Transparent"
+    Shell.BackgroundColor="#d6d6d6"
     FlyoutIcon="menu.png">
 
 
@@ -39,6 +39,5 @@
             </Grid>
         </DataTemplate>
     </Shell.FlyoutHeaderTemplate>
-
 
 </Shell>

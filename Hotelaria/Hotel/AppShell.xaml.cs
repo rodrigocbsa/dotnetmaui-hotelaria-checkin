@@ -1,7 +1,7 @@
 ﻿using CommunityToolkit.Maui.Core;
-using Hospede.Methods;
 using Hotel.Pages;
-using Hotel.Paths;
+using SharedContent.Methods;
+using SharedContent.Paths;
 
 
 namespace Hotel;
