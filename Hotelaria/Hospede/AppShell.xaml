@@ -10,6 +10,7 @@
     FlyoutIcon="menu.png">
 
 
+    <!-- BARRA INFERIOR -->
     <Tab Title="CheckIn"
          Icon="checkin.png">
         <ShellContent ContentTemplate="{DataTemplate local:MainPage}"/>
@@ -19,11 +20,19 @@
          Icon="ficha.png">
         <ShellContent ContentTemplate="{DataTemplate pages:FichaPage}"/>
     </Tab>
+    <!-- $end -->
 
+    <!-- BARRA LATERAL -->
     <MenuItem x:Name="About"
-              Text="Sobre o aplicativo"
+              Text="Sobre"
               IconImageSource="info.png"/>
+    <MenuItem x:Name="Update"
+              Text="Atualizar"
+              IconImageSource="upgrade.png"/>
+    <!-- $end -->
+    
 
+    <!-- BANNER da BARRA LATERAL-->
     <Shell.FlyoutHeaderTemplate>
         <DataTemplate>
             <Grid BackgroundColor="Black"
@@ -39,5 +48,6 @@
             </Grid>
         </DataTemplate>
     </Shell.FlyoutHeaderTemplate>
+    <!-- $end -->
 
 </Shell>

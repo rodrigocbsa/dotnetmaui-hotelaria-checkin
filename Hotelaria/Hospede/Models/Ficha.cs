@@ -7,8 +7,8 @@ internal class Ficha
     public string NomeCompleto { get; set; }
     public string CPF { get; set; }
     public string DataNascimento { get; set; }
+    public string Sexo { get; set; }
     public string CEP { get; set; }
-
     public string Email { get; set; }
     public string Telefone { get; set; }
 }

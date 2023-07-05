@@ -1,7 +1,4 @@
-﻿using Hospede.Pages;
-using System.Diagnostics;
-
-namespace Hospede;
+﻿namespace Hospede;
 
 public partial class AppShell : Shell
 {
@@ -9,11 +6,32 @@ public partial class AppShell : Shell
     {
         InitializeComponent();
         About.Clicked += OnAboutClicked;
-        Routing.RegisterRoute(nameof(MainPage),typeof(MainPage));
+        Update.Clicked += OnUpdateClicked;
     }
 
     private async void OnAboutClicked(object sender, EventArgs e)
     {
-        await Navigation.PushModalAsync(new AboutPage());
+        try
+        {
+            Uri uri = new Uri("https://github.com/AIS-BRASIL/Downloads"); /// todo: Página no website da solução
+            await Browser.Default.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
+        }
+        catch (Exception ex)
+        {
+            // An unexpected error occurred. No browser may be installed on the device.
+        }
+    }
+
+    private async void OnUpdateClicked(object sender, EventArgs e)
+    {
+        try
+        {
+            Uri uri = new Uri("https://github.com/AIS-BRASIL/Downloads/releases");
+            await Browser.Default.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
+        }
+        catch (Exception ex)
+        {
+            // An unexpected error occurred. No browser may be installed on the device.
+        }
     }
 }

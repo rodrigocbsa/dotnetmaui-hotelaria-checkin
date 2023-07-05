@@ -29,7 +29,6 @@
 	  <None Remove="Resources\Images\hospede\qr.svg" />
 	  <None Remove="Resources\Images\hotel\export.png" />
 	  <None Remove="Resources\Images\hotel\scan.svg" />
-	  <None Remove="Resources\Images\info.png" />
 	  <None Remove="Resources\Images\logo.png" />
 	  <None Remove="Resources\Raw\AboutAssets.txt" />
 	  <None Remove="Resources\Splash\splash.svg" />

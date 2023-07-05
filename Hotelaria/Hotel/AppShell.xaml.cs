@@ -12,7 +12,6 @@ public partial class AppShell : Shell
     {
         InitializeComponent();
         Export.Clicked += OnExportClicked;
-        About.Clicked += OnAboutClicked;
     }
 
     private async void OnExportClicked(object sender, EventArgs e)
@@ -26,10 +25,5 @@ public partial class AppShell : Shell
             return;
         }
         await ToastMethods.ShowToastAsync("Não há fichas disponíveis para exportação", ToastDuration.Short);
-    }
-
-    private void OnAboutClicked(object sender, EventArgs e)
-    {
-        Navigation.PushModalAsync(new AboutPage());
     }
 }

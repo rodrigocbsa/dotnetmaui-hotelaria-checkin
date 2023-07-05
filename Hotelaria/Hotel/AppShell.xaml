@@ -16,10 +16,6 @@
               Text="Exportar FNRHs"
               IconImageSource="export.png"/>
 
-    <MenuItem x:Name="About"
-              Text="Suporte"
-              IconImageSource="info.png"/>
-
 
     <Shell.FlyoutHeaderTemplate>
         <DataTemplate>

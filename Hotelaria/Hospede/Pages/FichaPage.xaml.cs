@@ -54,6 +54,7 @@ public partial class FichaPage : ContentPage
             CPF.Text != null &&
             CEP.Text != null &&
             DataNascimento.Date.ToString() != null &&
+            Sexo.Text != null &&
             Email.Text != null &&
             Telefone.Text != null)
         {
@@ -63,10 +64,10 @@ public partial class FichaPage : ContentPage
                 CPF = CPF.Text,
                 CEP = CEP.Text,
                 DataNascimento = Convert.ToString(DataNascimento.Date),
+                Sexo = Sexo.Text,
                 Email = Email.Text,
                 Telefone = Telefone.Text
             };
-            Preferences.Default.Set("Aceite", Aceite.IsChecked);
             Preferences.Default.Set("CamposVazios", false);
         }
         else
@@ -83,8 +84,8 @@ public partial class FichaPage : ContentPage
         CPF.Text = ficha.CPF;
         CEP.Text = ficha.CEP;
         DataNascimento.Date = Convert.ToDateTime(ficha.DataNascimento);
+        Sexo.Text = ficha.Sexo;
         Telefone.Text = ficha.Telefone;
         Email.Text = ficha.Email;
-        Aceite.IsChecked = Preferences.Default.Get("Aceite", false);
     }
 }

@@ -1,56 +1,51 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:models="clr-namespace:Hospede.Models"
              x:Class="Hospede.Pages.FichaPage"
-             x:DataType="models:Ficha"
              Shell.FlyoutBehavior="Disabled">
 
     <VerticalStackLayout Margin="10">
 
         <!-- INFORMAÇÕES PESSOAIS -->
-        <Label Text="Informações pessoais"/>
-        <Entry x:Name="Nome"
-            Placeholder="Nome completo"
-        />
-        <Entry x:Name="CPF"
-            Placeholder="CPF"
-        />
-        <DatePicker x:Name="DataNascimento"
-        />
-        <Entry x:Name="CEP"
-               Placeholder="CEP"
-        />
+        <Label Text="Informações pessoais" FontSize="Title"/>
+
+        <Grid ColumnDefinitions="Auto, *">
+            <Label Text="Nome completo:" Grid.Column="0" VerticalOptions="Center"/>
+            <Entry x:Name="Nome" Grid.Column="1"/>
+        </Grid>
+
+        <Grid ColumnDefinitions="Auto, *">
+            <Label Text="CPF:" Grid.Column="0" VerticalOptions="Center"/>
+            <Entry x:Name="CPF" Grid.Column="1"/>
+        </Grid>
+
+        <Grid ColumnDefinitions="Auto, *">
+            <Label Text="Data de Nascimento:" Grid.Column="0" VerticalOptions="Center"/>
+            <DatePicker x:Name="DataNascimento" Grid.Column="1"/>
+        </Grid>
+
+        <Grid ColumnDefinitions="Auto, *">
+            <Label Text="Sexo:" Grid.Column="0" VerticalOptions="Center"/>
+            <Entry x:Name="Sexo" Grid.Column="1"/>
+        </Grid>
+
+        <Grid ColumnDefinitions="Auto, *">
+            <Label Text="CEP:" Grid.Column="0" VerticalOptions="Center"/>
+            <Entry x:Name="CEP" Grid.Column="1"/>
+        </Grid>
 
 
         <!-- DADOS DE CONTATO -->
-        <Label Text="Contato"/>
-        <Entry x:Name="Email"
-               Placeholder="Email"
-        />
-        <Entry x:Name="Telefone"
-            Placeholder="Telefone"
-        />
+        <Label Text="Contato" FontSize="Title"/>
 
+        <Grid ColumnDefinitions="Auto, *">
+            <Label Text="Email:" Grid.Column="0" VerticalOptions="Center"/>
+            <Entry x:Name="Email" Grid.Column="1"/>
+        </Grid>
 
-
-        <!-- TERMO DE ACEITE -->
-        <Grid
-            RowDefinitions="80"
-            ColumnDefinitions="Auto, *">
-
-            <CheckBox x:Name="Aceite"
-                Grid.Column="0"
-                Grid.Row="0"
-            />
-            <Editor
-                Text="Declaro que li e concordo com o seguinte termo de uso e privacidade: (1) A ficha está completamente preenchida e os dados estão corretos. (2) Declaro que sou o portador dos dados inseridos, Lei xxxx......."
-                
-                Grid.Column="1"
-                Grid.Row="0"
-                
-                Style="{StaticResource TermoDeAceite}"
-            />
+        <Grid ColumnDefinitions="Auto, *">
+            <Label Text="Telefone:" Grid.Column="0" VerticalOptions="Center"/>
+            <Entry x:Name="Telefone" Grid.Column="1"/>
         </Grid>
     </VerticalStackLayout>
 </ContentPage>
