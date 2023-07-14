@@ -6,6 +6,7 @@
     <VerticalStackLayout VerticalOptions="Center">
 
         <Button x:Name="CheckIn_btn"
+                Text=""
                 ImageSource="qr.png"
                 
                 Style="{StaticResource PrimaryButton}">

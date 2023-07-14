@@ -1,3 +1,4 @@
+using CommunityToolkit.Maui.Converters;
 using CommunityToolkit.Maui.Core;
 using Hospede.Methods;
 using Hospede.Models;
@@ -19,7 +20,7 @@ public partial class FichaPage : ContentPage
     }
     protected override void OnAppearing()
     {
-        if (File.Exists(SharedApplicationPaths.QrPath))
+        if (File.Exists(SharedApplicationPaths.CsvPath))
             LoadCSVDataToXAML();
     }
 
@@ -35,6 +36,8 @@ public partial class FichaPage : ContentPage
         else
         {
             await ToastMethods.ShowToastAsync("Salvamento automático: houveram campos vazios na ficha e portanto seus dados não puderam ser salvos.", ToastDuration.Long);
+            File.Delete(SharedApplicationPaths.CsvPath);
+            File.Delete(SharedApplicationPaths.QrPath);
         }
 
     }
@@ -49,14 +52,16 @@ public partial class FichaPage : ContentPage
     private Ficha DeXAMLParaFicha()
     {
         Ficha ficha = null;
+        IsStringNullOrEmptyConverter isStringNullOrEmpty = new();
 
-        if (Nome.Text != null &&
-            CPF.Text != null &&
-            CEP.Text != null &&
-            DataNascimento.Date.ToString() != null &&
-            Sexo.Text != null &&
-            Email.Text != null &&
-            Telefone.Text != null)
+        if (!isStringNullOrEmpty.ConvertFrom(Nome.Text) &&
+            !isStringNullOrEmpty.ConvertFrom(CPF.Text) &&
+            !isStringNullOrEmpty.ConvertFrom(CEP.Text) &&
+            !isStringNullOrEmpty.ConvertFrom(DataNascimento.Date.ToString()) &&
+            !isStringNullOrEmpty.ConvertFrom(Sexo.Text) &&
+            !isStringNullOrEmpty.ConvertFrom(Email.Text) &&
+            !isStringNullOrEmpty.ConvertFrom(Telefone.Text) &&
+            TermoAceite.IsChecked)
         {
             ficha = new()
             {
@@ -69,10 +74,12 @@ public partial class FichaPage : ContentPage
                 Telefone = Telefone.Text
             };
             Preferences.Default.Set("CamposVazios", false);
+            Preferences.Default.Set("Termo", true);
         }
         else
         {
             Preferences.Default.Set("CamposVazios", true);
+            Preferences.Default.Set("Termo", false);
         }
 
 
@@ -87,5 +94,6 @@ public partial class FichaPage : ContentPage
         Sexo.Text = ficha.Sexo;
         Telefone.Text = ficha.Telefone;
         Email.Text = ficha.Email;
+        TermoAceite.IsChecked = Preferences.Default.Get("Termo", false);
     }
 }

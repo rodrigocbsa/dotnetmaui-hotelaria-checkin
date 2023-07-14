@@ -73,6 +73,8 @@
 	</ItemGroup>
 	<!--$end-->
 
+	
+	<!-- STYLES -->
 	<ItemGroup>
 		<ProjectReference Include="../SharedContent/SharedContent.csproj" />
 	</ItemGroup>
@@ -81,6 +83,10 @@
 	  <Compile Update="Resources\Styles\SharedResourceDictionary.xaml.cs">
 	    <DependentUpon>%(Filename)</DependentUpon>
 	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+		<MauiIcon Include="..\SharedContent\Resources\AppIcon\appicon.svg"></MauiIcon>
 	</ItemGroup>
 
 </Project>

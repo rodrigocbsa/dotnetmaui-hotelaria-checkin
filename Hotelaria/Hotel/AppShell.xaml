@@ -15,6 +15,9 @@
     <MenuItem x:Name="Export"
               Text="Exportar FNRHs"
               IconImageSource="export.png"/>
+    <MenuItem x:Name="Help"
+              Text="Suporte"
+              IconImageSource="question.png"/>
 
 
     <Shell.FlyoutHeaderTemplate>
@@ -32,5 +35,15 @@
             </Grid>
         </DataTemplate>
     </Shell.FlyoutHeaderTemplate>
+
+    <!-- FOOTER DA BARRA LATERAL -->
+    <Shell.FlyoutFooterTemplate>
+        <DataTemplate>
+            <StackLayout>
+                <Label Text="v1.0.0 Jul 2023" FontSize="Micro" TextColor="LightGrey" HorizontalOptions="Center"/>
+            </StackLayout>
+        </DataTemplate>
+    </Shell.FlyoutFooterTemplate>
+    <!-- $end -->
 
 </Shell>

@@ -12,6 +12,7 @@ public partial class AppShell : Shell
     {
         InitializeComponent();
         Export.Clicked += OnExportClicked;
+        Help.Clicked += OnHelpClicked;
     }
 
     private async void OnExportClicked(object sender, EventArgs e)
@@ -25,5 +26,10 @@ public partial class AppShell : Shell
             return;
         }
         await ToastMethods.ShowToastAsync("Não há fichas disponíveis para exportação", ToastDuration.Short);
+    }
+
+    private void OnHelpClicked(object sender, EventArgs e)
+    {
+        // Whatsapp Business
     }
 }

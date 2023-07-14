@@ -5,15 +5,15 @@ public partial class AppShell : Shell
     public AppShell()
     {
         InitializeComponent();
+        AboutUs.Clicked += OnAboutUsClicked;
         About.Clicked += OnAboutClicked;
-        Update.Clicked += OnUpdateClicked;
     }
 
-    private async void OnAboutClicked(object sender, EventArgs e)
+    private async void OnAboutUsClicked(object sender, EventArgs e)
     {
         try
         {
-            Uri uri = new Uri("https://github.com/AIS-BRASIL/Downloads"); /// todo: Página no website da solução
+            Uri uri = new Uri("https://ais-brasil.github.io");
             await Browser.Default.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
         }
         catch (Exception ex)
@@ -22,11 +22,11 @@ public partial class AppShell : Shell
         }
     }
 
-    private async void OnUpdateClicked(object sender, EventArgs e)
+    private async void OnAboutClicked(object sender, EventArgs e)
     {
         try
         {
-            Uri uri = new Uri("https://github.com/AIS-BRASIL/Downloads/releases");
+            Uri uri = new Uri("https://ais-brasil.github.io/checkin-hospede-brasil");
             await Browser.Default.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
         }
         catch (Exception ex)

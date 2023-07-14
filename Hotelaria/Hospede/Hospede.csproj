@@ -78,6 +78,7 @@
 	  </MauiXaml>
 	</ItemGroup>
 
+	<!-- STYLES -->
 	<ItemGroup>
 		<ProjectReference Include="../SharedContent/SharedContent.csproj" />
 	</ItemGroup>
@@ -87,6 +88,11 @@
 	    <DependentUpon>%(Filename)</DependentUpon>
 	  </Compile>
 	</ItemGroup>
+
+	<ItemGroup>
+		<MauiIcon Include="..\SharedContent\Resources\AppIcon\appicon.svg"></MauiIcon>
+	</ItemGroup>
+
 
 	<ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadDebuggerTimeoutExceptionHospedeHideInfoBar="True" /></VisualStudio></ProjectExtensions>
 

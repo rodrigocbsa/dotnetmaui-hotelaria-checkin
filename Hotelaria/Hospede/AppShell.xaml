@@ -9,26 +9,25 @@
     Shell.BackgroundColor="#d6d6d6"
     FlyoutIcon="menu.png">
 
-
-    <!-- BARRA INFERIOR -->
-    <Tab Title="CheckIn"
+    <!-- ABAS INFERIORES -->
+    <Tab Title="Gerar QrCode"
          Icon="checkin.png">
         <ShellContent ContentTemplate="{DataTemplate local:MainPage}"/>
     </Tab>
 
-    <Tab Title="Minha ficha"
+    <Tab Title="Cadastrar minha ficha"
          Icon="ficha.png">
         <ShellContent ContentTemplate="{DataTemplate pages:FichaPage}"/>
     </Tab>
     <!-- $end -->
 
     <!-- BARRA LATERAL -->
-    <MenuItem x:Name="About"
-              Text="Sobre"
+    <MenuItem x:Name="AboutUs"
+              Text="Quem somos"
               IconImageSource="info.png"/>
-    <MenuItem x:Name="Update"
-              Text="Atualizar"
-              IconImageSource="upgrade.png"/>
+    <MenuItem x:Name="About"
+              Text="Sobre o aplicativo"
+              IconImageSource="question.png"/>
     <!-- $end -->
     
 
