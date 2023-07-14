@@ -38,6 +38,8 @@ internal static class CSVMethods
     public static void GenerateQrCodeFromCSVData()
     {
         var qr = QrCode.EncodeText(DeCSVParaString(), QrCode.Ecc.Low);
+        if(File.Exists(SharedApplicationPaths.QrPath))
+            File.Delete(SharedApplicationPaths.QrPath);
         qr.SaveAsPng(SharedApplicationPaths.QrPath, 10, 4);
     }
 }

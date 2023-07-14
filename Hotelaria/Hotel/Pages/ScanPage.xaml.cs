@@ -1,5 +1,6 @@
 using BarcodeScanner.Mobile;
 using CommunityToolkit.Maui.Core;
+using Microsoft.VisualBasic;
 using SharedContent.Methods;
 using SharedContent.Paths;
 
@@ -59,7 +60,8 @@ public partial class ScanPage : ContentPage
         {
             result += obj[i].DisplayValue;
         }
-        return result;
+        // Transpondo o final de linha e concatenando hora e data do checkin
+        return result.Remove(result.Length - 2) + "," + DateAndTime.TimeString + "," + DateAndTime.DateString + "\r\n";
     }
     private void SaveFNRHAsStringToCSV(string result)
     {
@@ -67,12 +69,13 @@ public partial class ScanPage : ContentPage
         {
             WriteHeaderToCsvOnce(result);
         }
-        File.AppendAllText(SharedApplicationPaths.CsvPath, result.Split(Environment.NewLine)[1]); // Pula o cabeçalho
+        // Pula o cabeçalho e concatena data hora checkin
+        File.AppendAllText(SharedApplicationPaths.CsvPath, result.Split(Environment.NewLine)[1]);
     }
 
     private void WriteHeaderToCsvOnce(string result)
     {
-        File.AppendAllText(SharedApplicationPaths.CsvPath, result.Split(Environment.NewLine)[0]);
+        File.AppendAllText(SharedApplicationPaths.CsvPath, result.Split(Environment.NewLine)[0].Remove(result.Split(Environment.NewLine)[0].Length - 1) + ",HoraCheckIn,DataCheckIn\r\n");
         Preferences.Default.Set("IsHeaderWritten", true);
     }
 }
