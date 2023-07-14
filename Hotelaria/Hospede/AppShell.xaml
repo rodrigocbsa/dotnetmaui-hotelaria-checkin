@@ -4,22 +4,13 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Hospede"
-    xmlns:pages="clr-namespace:Hospede.Pages"
     Shell.FlyoutBehavior="Flyout"
     Shell.BackgroundColor="#d6d6d6"
     FlyoutIcon="menu.png">
 
-    <!-- ABAS INFERIORES -->
-    <Tab Title="Gerar QrCode"
-         Icon="checkin.png">
+    <FlyoutItem FlyoutItemIsVisible="False">
         <ShellContent ContentTemplate="{DataTemplate local:MainPage}"/>
-    </Tab>
-
-    <Tab Title="Cadastrar minha ficha"
-         Icon="ficha.png">
-        <ShellContent ContentTemplate="{DataTemplate pages:FichaPage}"/>
-    </Tab>
-    <!-- $end -->
+    </FlyoutItem>
 
     <!-- BARRA LATERAL -->
     <MenuItem x:Name="AboutUs"

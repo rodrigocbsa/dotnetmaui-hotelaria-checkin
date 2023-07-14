@@ -30,6 +30,8 @@ public partial class ScanPage : ContentPage
             await DisplayAlert("Aviso", "O aplicativo não irá funcionar sem as devidas permissões, por favor, permita o acesso nas configurações. Após ler este aviso, o aplicativo irá fechar.", "Ok");
             Application.Current.Quit();
         }
+
+        await ToastMethods.ShowToastAsync("Aguardando QrCode...", ToastDuration.Short);
     }
 
     private void OnDetectedCameraView(object sender, OnDetectedEventArg e)
